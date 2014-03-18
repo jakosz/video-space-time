@@ -1,9 +1,17 @@
+vst (video-space-time)
+======
+
+vst is a set of R functions that lets you generate framesets for video visualizations of spatial data.
+
+---
+
 vst overloads the plot() function, so to generate the frameset you will need to 
 construct an appropriate input object. 
 You do this with simple wrapper for list constructor, vst_list. 
 
 Input list needs to have the following elements:
 
+```
 data        : a source dataframe
 n           : how many rows to plot? (sql limit)
 offset      : from which row to start?
@@ -27,6 +35,7 @@ font_light  : [optional] defaults to 'Roboto Light'
 fadeout_duration : [optional] how many frames should be used for the fadeout effect?; defaults to 30
 color_palette    : [optional] defaults to heat.colors(unique(data[[color]]))
 size_cex_init    : [optional] initial cex amplification of the new dot/event appearing in the video; defaults to 2
+```
 
 Examples (you can find the dataframes in the ./data directory):
 
