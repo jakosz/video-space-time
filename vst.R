@@ -83,6 +83,7 @@ function(...) {
     res = add('fadeout_duration', 30, res)
     res = add('color_palette', heat.colors(length(unique(res$data[[res$color]]))), res)
     res = add('size_cex_init', 2, res)
+    res = add('vst_layout', c(1, rep(2, 4), 3), res)
     return(res)
 }
 
@@ -118,7 +119,7 @@ function(args) {
         jpeg(ps(dir, '/', file, '_', zeroes(i, nchar(offset+n)), '.jpg'), width = width, height = height)
         par(bg=col_bg, mar = rep(1, 4))
         # Set layout:
-        layout(matrix(c(1, rep(2, 4), 3), nrow = 1))
+        layout(matrix(vst_layout, nrow = 1))
         # Size legend:
         vst_size_legend(args, i)
         # Plot all event points for context:

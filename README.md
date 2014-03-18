@@ -28,6 +28,7 @@ size        : name of the column specifying the dot cex
 size_text   : name of the column specifying the dot cex as used in the legend
 color       : name of the column specifying the dot color
 color_text  : name of the column specifying the dot color as used in the legend
+vst_layout  : [optional] value vector for the layout matrix (1 is for size legend, 2 for the map and 3 for the color legend); defaults to c(1, rep(2, 4), 3)
 mc.cores    : [optional] how many cores should be used for plotting?; defaults to detectCores()
 col_bg      : [optional] background color; defaults to 'black'
 col_txt_1   : [optional] font color; defaults to rgb(1,1,1,.5)
@@ -48,11 +49,11 @@ source('vst.R')
 load(file='data/uk12.rda')
 uk = vst_list(data = ukd, 
               n = 10**3, 
-              offset = 1, 
+              offset = 1000, 
               title = 'Road accidents in the United Kingdom', 
               dir = 'framesets/uk12', 
               file = 'uk12', 
-              width = 1100, 
+              width = 1200, 
               height = 1000, 
               latitude = 'Latitude', 
               longitude = 'Longitude', 
@@ -62,7 +63,8 @@ uk = vst_list(data = ukd,
               color_text = 'Casualties', 
               mc.cores = 4, 
               col_bg = 'black', 
-              col_txt_1 = rgb(1,1,1,.5))
+              col_txt_1 = rgb(1,1,1,.5), 
+              vst_layout = c(rep(1, 2), rep(2, 4), rep(3, 2)))
 plot(uk)
 
 load(file='data/us12.rda')
