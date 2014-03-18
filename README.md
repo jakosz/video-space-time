@@ -52,7 +52,7 @@ uk = vst_list(data = ukd,
               title = 'Road accidents in the United Kingdom', 
               dir = 'framesets/uk12', 
               file = 'uk12', 
-              width = 1000, 
+              width = 1100, 
               height = 1000, 
               latitude = 'Latitude', 
               longitude = 'Longitude', 
@@ -63,7 +63,6 @@ uk = vst_list(data = ukd,
               mc.cores = 4, 
               col_bg = 'black', 
               col_txt_1 = rgb(1,1,1,.5))
-}
 plot(uk)
 
 load(file='data/us12.rda')
@@ -87,5 +86,4 @@ us = vst_list(data = usd,
               marLim = list(x = c(-5, 0), y = c(0, 10)), 
               fadeout_duration = 100)
 plot(us)
-
 ```
