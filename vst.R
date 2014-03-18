@@ -120,7 +120,7 @@ function(args) {
         # Set layout:
         layout(matrix(c(1, rep(2, 4), 3), nrow = 1))
         # Size legend:
-        vst_size_legend(args, cd, i)
+        vst_size_legend(args, i)
         # Plot all event points for context:
         plot(data[[longitude]], data[[latitude]], 
              pch = 19, cex = .1, col = 'grey30', ylim = yLim, xlim = xLim, 
@@ -133,12 +133,12 @@ function(args) {
                        col = rev(heat.colors(max(data[[color]])))[data[[color]][i]])
             }
             # Draw fading-out points:
-            vst_fadeout(args, cd, i)
+            vst_fadeout(args, i)
             # Add title and current timestamp:
             mtext(title, side = 3, line = -7, cex = 3, col = rgb(1,1,1,.75), family = 'Roboto')
             mtext(data$datetime[i], side = 3, line = -13, cex = 4, col = col_txt_1, family = 'Roboto Light')
             # Plot color legend:
-            vst_color_legend(args, cd, i)
+            vst_color_legend(args, i)
         dev.off()
     })
 }
