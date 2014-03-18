@@ -4,6 +4,7 @@ vst (video-space-time)
 vst is a set of R functions that lets you generate framesets for video visualizations of spatial data.
 
 (note: it depends on my utilites package, [jap](https://github.com/jakosz/jap)).
+(also note: to make a video from the frameset you'll need some conversion tool, such as ffmpeg or avconv).
 
 ---
 
