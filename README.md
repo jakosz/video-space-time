@@ -39,7 +39,7 @@ size_cex_init    : [optional] initial cex amplification of the new dot/event app
 
 Examples (you can find the dataframes in the ./data directory):
 
-```r
+```R
 
 source('vst.R')
 
