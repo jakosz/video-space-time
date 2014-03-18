@@ -2,6 +2,7 @@ vst (video-space-time)
 ======
 
 vst is a set of R functions that lets you generate framesets for video visualizations of spatial data.
+(note: it depends on my utilites package, [jap](https://github.com/jakosz/jap)).
 
 ---
 
@@ -40,6 +41,7 @@ size_cex_init    : [optional] initial cex amplification of the new dot/event app
 Examples (you can find the dataframes in the ./data directory):
 
 ```
+library(jap)
 source('vst.R')
 
 load(file='data/uk12.rda')
